@@ -1,0 +1,152 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,roman]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{black}  
+\nopagenumbers{}      
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+\usepackage{CJKutf8}                              
+
+
+\usepackage[scale=0.85]{geometry}
+\usepackage{multicol}
+
+
+\usepackage{import}
+
+
+\name{Raul}{Vazquez}
+\title{Software Engineer}                               
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+  
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\labelitemi}{\small$\bullet$}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-18mm}
+\begin{center}
+\begin{tabular}{ c c c }
+ \faMobile\enspace Skype: rvazquezg72 & \faEnvelopeO\enspace rvazquezglez@acm.org %& \faMapMarker\enspace  Mexico City 
+ \\  
+\end{tabular}
+\end{center}
+
+\section{PROFESSIONAL EXPERIENCE}
+{\customcventry{August 2017 - current}{\textbf{Senior Software Engineer}}{Rooam Inc.}{Washington, D.C. (remote)}{}{}}
+  {\begin{itemize}
+    \item Built and operate systems with a full-cycle approach, from gathering requirements and designing architecture to support live operations and monitoring.
+    \item Refactored existing systems to enable users located on different time-zones.
+    \item Created an internal system to automatically create and assign incidents to help on-call team.
+    \item Implemented integration with third party systems enabling operations on more restaurants.
+  \end{itemize}
+}
+
+\setlength{\parskip}{0.5em}
+
+{\customcventry{March 2014 - December 2017}{\textbf{Senior Software Engineer}}{Switchfly Inc.}{San Francisco, California (remote)}{}{}}
+  {\begin{itemize}
+    \item Rescued a payment processing project that was considered sunk and made it usable for all Latin America region.
+    \item Became a Subject Matter Expert on loyalty and travel activities modules of the Switchfly platform.
+    \item Vetted and groomed requests for change in the requirements funnel.
+    \item Designed and implemented new software features while maintaining legacy ones.
+    \item Taught other team members on how to write more readable, testable and reusable code.
+  \end{itemize}
+}
+
+\setlength{\parskip}{0.5em}
+
+{\customcventry{May 2013 - March 2014}{\textbf{Scrum Master, Technical Leader}}{GNP Insurance}{Mexico City, Mexico}{}{}}
+  {\begin{itemize}
+    \item Lead a team of five, removing impediments, guiding into self-management and extreme programming techniques.
+    \item Designed the architecture of new software features for managing insurance policies.
+    \item Implemented continuous integration pipelines allowing the team to deliver faster and more often.
+  \end{itemize}
+}
+
+{\customcventry{September 2012 - February 2013}{\textbf{Technical Leader, Senior Developer}}{SintelTI}{Mexico City, Mexico}{}{}}
+  {\begin{itemize}
+    \item Lead a team of three to implement a casino like application.
+    \item Built a system to unify and manage vital records (birth, marriage, death) across the country for the National Population Registry.
+  \end{itemize}
+}
+
+% {\customcventry{May 2012 - March 2015}{\textbf{JEE specialist, Instructor}}{TecGurus}{Mexico City, Mexico}{}{}}
+%   {\begin{itemize}
+%     \item tasks
+%   \end{itemize}
+% }
+
+\section{EDUCATION BACKGROUND}
+{\customcventry{January 2019 - Present}{Master of Computer Science (Data Engineering)}{Arizona State University (ASU)}{Tempe, Arizona (remote)}{}{}}
+ 
+{\customcventry{August 2006 - August 2011}{Bachelor of Computer Systems Engineering (Software Engineering)}{National Polytechnic Institute (IPN)}{Mexico City, Mexico}{}{}}
+
+
+
+
+\section{KEY TECHNICAL SKILLS}
+
+
+{
+Java, Groovy, Kotlin, Scala, Spring Boot, Spring Data, Spring Cloud, PostgreSQL, MongoDB.
+}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\end{document}
